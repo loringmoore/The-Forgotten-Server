@@ -49,8 +49,13 @@
 	<loot>
 		<item id="2148" countmax="75" chance="37500"/><!-- gold coin -->
 		<item id="2148" countmax="50" chance="37500"/><!-- gold coin -->
+<<<<<<< HEAD
 		<item id="2546" countmax="13" chance="4000"/><!-- burst arrow -->
 		<item id="2672" countmax="3" chance="15500"/><!-- dragon ham -->
+=======
+		<item id="2546" countmax="12" chance="4000"/><!-- burst arrow -->
+		<item id="2672" countmax="4" chance="15500"/><!-- dragon ham -->
+>>>>>>> refs/remotes/origin/master
 		<item id="2406" chance="25000"/><!-- short sword -->
 		<item id="2398" chance="21500"/><!-- mace -->
 		<item id="2509" chance="14000"/><!-- steel shield -->
