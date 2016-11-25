@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Rotworm Queen" nameDescription="a rotworm queen" race="blood" experience="7350" speed="526" manacost="0">
+	<health now="8500" max="8500"/>
+	<look type="295" corpse="8947"/>
+	<targetchange interval="60000" chance="0"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="0"/>
+		<flag staticattack="50"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-120" max="-100"/>
+		<attack name="physical" interval="3000" chance="20" range="14" radius="5" target="0" min="-200" max="-380">
+			<attribute key="areaEffect" value="explosionarea"/>
+		</attack>
+		<attack name="physical" interval="1000" chance="20" length="9" spread="4" min="-220" max="-400">
+			<attribute key="areaEffect" value="stones"/>
+		</attack>
+		<attack name="physical" interval="2000" chance="15" range="7" min="-190" max="-340">
+			<attribute key="shootEffect" value="largerock"/>
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="poisonfield" interval="1000" chance="47" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+		<attack name="ice" interval="3000" chance="30" length="8" spread="0" min="-220" max="-360">
+			<attribute key="areaEffect" value="whitenote"/>
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="15"/>
+	<loot>
+		<item id="2148" countmax="47" chance="100000"/><!-- gold coin -->
+		<item id="8971" chance="3333"/><!-- gland -->
+		<item id="3976" countmax="45" chance="20000"/><!-- worm -->
+	</loot>
+</monster>

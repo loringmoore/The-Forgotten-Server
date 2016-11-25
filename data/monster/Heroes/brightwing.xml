@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Brightwing" nameDescription="brightwing" race="blood" experience="5515" speed="200" manacost="0">
+	<health now="7295" max="7295"/>
+	<look type="239" corpse="6302"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="3"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="300"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="50" attack="40" poison="22"/>
+		<attack name="energy" interval="2000" chance="15" range="7" radius="3" target="1" min="-245" max="-365">
+			<attribute key="shootEffect" value="energyball"/>
+			<attribute key="areaEffect" value="bluefirework"/>
+		</attack>
+		<attack name="poison" interval="3000" chance="10" radius="5" target="0" min="-200" max="-600">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</attack>
+		<attack name="outfit" interval="2000" target="1" chance="16" monster="crab" duration="6000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="2000" target="1" chance="16" monster="pig" duration="6000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="2000" target="1" chance="16" monster="skunk" duration="6000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="18">
+		<defense name="healing" interval="1000" chance="13" min="234" max="356">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element energyPercent="20"/>
+		<element icePercent="10"/>
+	</elements>
+	<immunities>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Shriiiek" yell="1"/>
+		<voice sentence="I'm going to hurt you now!" />
+		<voice sentence="It only hurts until you die!" />
+	</voices>
+	<loot>
+		<item id="2148" countmax="75" chance="21500"/><!-- gold coin -->
+		<item id="2672" countmax="3" chance="22500"/><!-- dragon ham -->
+		<item id="2547" countmax="2" chance="3000"/><!-- power bolt -->
+		<item id="2146" chance="1000" /><!-- small sapphire -->
+		<item id="7588" chance="3000"/><!-- strong health potion -->
+		<item id="2187" chance="1000"/><!-- wand of inferno -->
+		<item id="7408" chance="750"/><!-- wydern fang -->
+		<item id="1976" chance="5000"/><!-- gemmed book -->
+		<item id="2127" chance="300"/><!-- emerald bangle -->
+	</loot>
+</monster>

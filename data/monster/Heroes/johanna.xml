@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Johanna" nameDescription="Johanna" race="blood" experience="7000" speed="576" manacost="0">
+	<health now="7350" max="7350"/>
+	<look type="269" head="98" body="57" legs="95" feet="114" addons="2" corpse="6081"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="105" attack="60"/>
+		<attack name="holy" interval="3000" chance="25" length="5" spread="3" min="-395" max="-460">
+			<attribute key="areaEffect" value="yellowfirework"/>
+		</attack>
+		<attack name="holy" interval="3000" chance="25" length="1" spread="1" min="-395" max="-460">
+			<attribute key="areaEffect" value="holyarea"/>
+		</attack>
+		<attack name="holy" interval="3000" chance="25" range="5" radius="5" target="0" min="-450" max="-600">
+			<attribute key="areaEffect" value="holydamage"/>
+		</attack>
+	</attacks>
+	<defenses armor="52" defense="74"/>
+	<elements>
+		<element icePercent="10"/>
+		<element firePercent="10"/>
+		<element holyPercent="5"/>
+		<element deathPercent="15"/>
+		<element physicalPercent="15"/>
+	</elements>
+	<voices interval="5000" chance="20">
+		<voice sentence="The crusade marches on!"/>
+		<voice sentence="Burn in the light!"/>
+		<voice sentence="By the light be damned!"/>
+		<voice sentence="Cower before Zakarum!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="12" chance="20000"/><!-- gold coin -->
+		<item id="2666" countmax="3" chance="20000"/><!-- meat -->
+		<item id="2674" countmax="4" chance="10000"/><!-- apple -->
+		<item id="2229" countmax="5" chance="55500"/><!-- skull -->
+		<item id="2379" chance="15000"/><!-- dagger -->
+		<item id="2498" chance="7000"/><!-- royal helmet -->
+		<item id="2657" chance="8000"/><!-- simple dress -->
+		<item id="2389" countmax="8" chance="10000"/><!-- spear -->
+		<item id="2476" chance="2500"/><!-- plate armor -->
+		<item id="2125" chance="850"/><!-- crystal necklace -->
+		<item id="7456" chance="2800"/><!-- noble axe -->
+		<item id="18465" chance="100"/><!-- shiny blade -->
+		<item id="2499" chance="1500"/><!-- amazon helmet -->
+		<item id="2500" chance="1200"/><!-- amazon armor -->
+		<item id="2537" chance="1200"/><!-- amazon shield -->
+	</loot>
+</monster>

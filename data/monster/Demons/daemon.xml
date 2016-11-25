@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Oblivion" nameDescription="oblivion" race="fire" experience="360000" speed="500" manacost="0">
+	<health now="300000" max="300000"/>
+	<look type="570" corpse="22726"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="40"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1000" skill="370" attack="130"/>
+		<attack name="manadrain" interval="3000" chance="13" range="7" min="-820" max="-900"/>
+		<attack name="physical" interval="2000" chance="14" range="7" radius="7" target="1" min="-760" max="-950">
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="ferumbras"/>
+		</attack>
+		<attack name="death" interval="1000" chance="18" radius="9" target="0" min="-900" max="-1400">
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>
+		<attack name="death" interval="1000" chance="18" radius="8" target="0" min="-930" max="-1410">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="death" interval="1000" chance="17" range="7" min="-650" max="-950">
+			<attribute key="shootEffect" value="suddendeath"/>
+		</attack>
+		<attack name="death" interval="1000" chance="19" length="8" spread="3" min="-935" max="-1985">
+			<attribute key="areaEffect" value="blacksmoke"/>
+		</attack>
+		<attack name="death" interval="3000" chance="30" length="8" spread="0" min="-1220" max="-1460">
+			<attribute key="areaEffect" value="smallclouds"/>
+		</attack>
+		<attack name="fire" interval="1000" chance="18" radius="8" target="0" min="-950" max="-1390">
+			<attribute key="areaEffect" value="stepsvertical"/>
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="55">
+		<defense name="healing" interval="1000" chance="15" min="90" max="200">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="15" speedchange="200" duration="20000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="100"/>
+		<element physicalPercent="25"/>
+		<element earthPercent="80"/>
+		<element energyPercent="20"/>
+		<element deathPercent="100"/>
+		<element icePercent="-5"/>
+		<element holyPercent="-10"/>
+	</elements>
+	<immunities>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<summons maxSummons="3">
+		<summon name="grim reaper" interval="2000" chance="10" max="3"/>
+	</summons>
+	<voices interval="5000" chance="10">
+		<voice sentence="MUHAHAHAHA!" yell="1"/>
+		<voice sentence="I SMELL FEEEEEAAAR!" yell="1"/>
+		<voice sentence="CHAMEK ATH UTHUL ARAK!" yell="1"/>
+		<voice sentence="Your resistance is futile!"/>
+		<voice sentence="Your soul will be mine!" yell="0"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="90" chance="28000"/><!-- gold coin -->
+		<item id="2148" countmax="80" chance="28000"/><!-- gold coin -->
+		<item id="2148" countmax="75" chance="28000"/><!-- gold coin -->
+		<item id="2148" countmax="65" chance="28000"/><!-- gold coin -->
+		<item id="5954" chance="1150"/><!-- demon horn -->
+		<item id="2520" chance="750"/><!-- demon shield -->
+		<item id="2462" chance="3000"/><!-- devil helmet -->
+		<item id="2387" chance="21000"/><!-- double axe -->
+		<item id="2432" chance="6000"/><!-- fire axe -->
+		<item id="2795" countmax="6" chance="12500"/><!-- fire mushroom -->
+		<item id="2393" chance="1650"/><!-- giant sword -->
+		<item id="2179" chance="700"/><!-- golden ring -->
+		<item id="2418" chance="1650"/><!-- golden sickle -->
+		<item id="2396" chance="1000"/><!-- ice rapier -->
+		<item id="2472" chance="150"/><!-- magic plate armor -->
+		<item id="2514" chance="550"/><!-- mastermind shield -->
+		<item id="2176" chance="3000"/><!-- orb -->
+		<item id="2152" countmax="3" chance="23750"/><!-- platinum coin -->
+		<item id="1982" chance="1000"/><!-- purple tome -->
+		<item id="2214" chance="900"/><!-- ring of healing -->
+		<item id="2149" chance="10000"/><!-- small emerald -->
+		<item id="2165" chance="1500"/><!-- stealth ring -->
+		<item id="2151" chance="3300"/><!-- talon -->
+		<item id="8473" chance="12500"/><!-- ultimate health potion -->
+		<item id="8473" chance="12500"/><!-- ultimate health potion -->
+		<item id="8473" chance="12500"/><!-- ultimate health potion -->
+		<item id="2171" chance="1200"/><!-- platinum amulet -->
+		<item id="2164" chance="800"/><!-- might ring -->
+		<item id="7382" chance="950"/><!-- demonrage sword -->
+		<item id="2470" chance="450"/><!-- golden legs -->
+		<item id="7393" chance="50"/><!-- demon trophy -->
+	</loot>
+</monster>

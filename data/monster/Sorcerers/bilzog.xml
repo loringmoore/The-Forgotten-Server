@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Bilzog" nameDescription="a bilzog" race="blood" experience="10000" speed="500" manacost="0">
+	<health now="15000" max="15000"/>
+	<look type="127" corpse="6080"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="125" attack="60"/>
+		<attack name="holy" interval="1000" chance="25" radius="9" target="0" min="-620" max="-950">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="manadrain" interval="3200" chance="30" length="8" spread="0" min="-950" max="-1050">
+			<attribute key="areaEffect" value="bluefirework"/>
+		</attack>
+		<attack name="death" interval="3000" chance="25" length="7" spread="1" min="-590" max="-750">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="30">
+		<defense name="healing" interval="3000" chance="55" min="530" max="870">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element holyPercent="25"/>
+		<element physicalPercent="25"/>
+		<element earthPercent="25"/>
+	</elements>
+	<immunities>
+		<immunity fire="1"/>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity drunk="1"/>
+		<immunity death="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="GUUUHHHHHHHHH"/>
+	</voices>
+	<loot>
+		<item id="8843" countmax="9" chance="10075"/><!-- onion -->
+		<item id="2666" countmax="4" chance="13333"/><!-- meat -->
+		<item id="2148" countmax="100" chance="161000"/><!-- gold coin -->
+		<item id="2152" countmax="24" chance="10850"/><!-- platinum coin -->
+		<item id="2006" chance="9990"/><!-- vial -->
+		<item id="2234" chance="8990"/><!-- broken sword -->
+		<item id="2394" chance="9990"/><!-- morning star -->
+		<item id="2154" chance="5333"/><!-- yellow gem -->
+		<item id="2145" countmax="5" chance="6200"/><!-- small diamond -->
+		<item id="2147" countmax="7" chance="7000"/><!-- small ruby -->
+		<item id="9970" countmax="4" chance="7000"/><!-- small topaz -->
+		<item id="2466" chance="3990"/><!-- golden armor -->
+		<item id="2517" chance="3550"/><!-- shield of honour -->
+		<item id="9006" chance="250"/><!-- toy spider -->
+	</loot>
+</monster>

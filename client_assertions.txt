@@ -1,0 +1,19 @@
+----- 26/05/2016 00:18:30 - Loring (192.168.1.4) -----
+Debug Assertion 10.41 Creatures.cpp 1463
+Thu May 26 00:16:38 2016
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in USA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 164 131 131 149 131 106 131 131 149 131
+Last Packet: 106 229 003 237 003 007 002 097 000 000 000 000 000 248 024 000
+Player Position: [1000,1005,7]
+Player Name: Sinister (Forgotten)
+Player Action: 048 046 048 046 048 046 048 058 055 049 055 050
+Player.cpp 343: exception occurred, reason:
+Network.cpp 844: exception occurred, reason:
+Control.cpp 1481: exception occurred (Type = 164) (MainWindow = 60267736), reason:
+Communication.cpp 3392: exception occurred, reason:
+Creatures.cpp 1463: assertion failed (Spell = 176) (Delay = 2000), reason:
+Spell < SPELL_BEYONDLAST
+Comment: 

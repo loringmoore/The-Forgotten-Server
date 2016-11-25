@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Toxic" nameDescription="a toxic" race="venom" experience="20000" speed="750" manacost="0">
+	<health now="17500" max="17500"/>
+	<look type="509" corpse="6532"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="50" attack="70"/>
+		<attack name="physical" interval="1000" chance="39" range="6" min="-650" max="-950">
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="ferumbras"/>
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="10"/>
+	<elements>
+		<element firePercent="80"/>
+		<element energyPercent="80"/>
+		<element holyPercent="-20"/>
+		<element icePercent="80"/>
+		<element deathPercent="-10"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+		<immunity earth="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Run..."/>
+		<voice sentence="Blubb"/>
+	</voices>
+	<summons maxSummons="1">
+		<summon name="Toxic" interval="1000" chance="10" max="1"/>
+	</summons>
+	<loot>
+		<item id="20100" countmax="6" chance="19750"/><!-- soft cheese -->
+		<item id="2235" chance="10500"/><!-- mouldy cheese -->
+		<item id="2244" chance="11500"/><!-- some leaves -->
+		<item id="2411" chance="9500"/><!-- poison dagger -->
+		<item id="2545" countmax="26" chance="9750"/><!-- poison arrow -->
+		<item id="2504" chance="1990"/><!-- dwarven legs -->
+		<item id="8880" chance="1395"/><!-- swamplair armor -->
+		<item id="6391" chance="990"/><!-- knightmare shield -->
+		<item id="2453" chance="350"/><!-- arcane staff -->	
+	</loot>
+</monster>

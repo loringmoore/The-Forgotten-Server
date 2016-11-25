@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="The Orc King" nameDescription="the orc king" race="venom" experience="16700" speed="390" manacost="0">
+	<health now="16950" max="16950"/>
+	<look type="238" corpse="6008"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="190" attack="100"/>
+		<attack name="fire" interval="1000" chance="25" range="7" min="-100" max="-320">
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="skullvertical"/>
+		</attack>
+		<attack name="physical" interval="1000" chance="35" range="7" min="-270" max="-395">
+			<attribute key="shootEffect" value="largerock"/>
+		</attack>
+		<attack name="poison" interval="3000" chance="20" range="14" radius="5" target="0" min="-200" max="-480">
+			<attribute key="areaEffect" value="greenbubble"/>
+		</attack>
+		<attack name="lifedrain" interval="1000" chance="11" target="1" radius="4" min="-225" max="-400">
+			<attribute key="shootEffect" value="whirlwindsword"/>
+		</attack>
+		<attack name="poison" interval="1000" chance="13" range="7" min="-220" max="-430">
+			<attribute key="shootEffect" value="envenomedarrow"/>
+			<attribute key="areaEffect" value="greenspark"/>
+		</attack>
+		<attack name="physical" interval="2500" chance="10" length="8" spread="0" min="-100" max="-1000">
+			<attribute key="areaEffect" value="stones"/>
+		</attack>
+	</attacks>
+	<defenses armor="22" defense="35">
+		<defense name="healing" interval="1000" chance="15" min="270" max="330">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="80"/>
+		<element energyPercent="40"/>
+		<element holyPercent="20"/>
+		<element earthPercent="-10"/>
+		<element deathPercent="-5"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="You shall never escape my wrath!"/>
+		<voice sentence="I am immortal!"/>
+		<voice sentence="Harrrrk! You think you are strong now?"/>
+		<voice sentence="Yes, flee this place, but you will never escape my revenge!"/>
+		<voice sentence="Blubb"/>
+	</voices>
+	<summons maxSummons="4">
+		<summon name="Orc Abomination" interval="1000" chance="25" max="4"/>
+	</summons>
+	<loot>
+		<item id="2148" countmax="50" chance="15000"/><!-- gold coin -->
+		<item id="2399" chance="4000" countmax="22"/><!-- throwing star -->
+		<item id="2667" countmax="2" chance="12500"/><!-- fish -->
+		<item id="2419" chance="29500"/><!-- scimitar -->
+		<item id="2666" countmax="2" chance="9000"/><!-- meat -->
+		<item id="2428" chance="17650"/><!-- orcish axe -->
+		<item id="2463" chance="6000"/><!-- plate armor -->
+		<item id="2200" chance="7500"/><!-- protection amulet -->
+		<item id="2647" chance="6000"/><!-- plate legs -->
+		<item id="3965" chance="7000"/><!-- hunting spear -->
+		<item id="2478" chance="9000"/><!-- brass legs -->
+		<item id="2465" chance="9000"/><!-- brass armor -->
+		<item id="2490" chance="6500"/><!-- dark helmet -->
+		<item id="2377" chance="5000"/><!-- two-handed sword -->
+		<item id="2434" chance="1000"/><!-- dragon hammer -->
+		<item id="2497" chance="750"/><!-- crusader helmet -->
+		<item id="2165" chance="900"/><!-- stealth ring -->
+		<item id="7618" chance="1000"/><!-- health potion -->
+		<item id="7395" chance="100"/><!-- orc trophy -->
+		<item id="2179" chance="100"/><!-- golden ring -->
+		<item id="7891" chance="100"/><!-- magma boots -->
+	</loot>
+</monster>

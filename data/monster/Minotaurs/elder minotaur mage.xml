@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Elder Minotaur Mage" nameDescription="an elder minotaur mage" race="blood" experience="23500" speed="500" manacost="0">
+	<health now="15000" max="15000"/>
+	<look type="577" head="114" body="90" legs="114" feet="94" corpse="5981"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="5"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="10" attack="20"/>
+		<attack name="energy" interval="1000" chance="15" range="7" min="-300" max="-600">
+			<attribute key="shootEffect" value="energy"/>
+			<attribute key="areaEffect" value="teleport"/>
+		</attack>
+		<attack name="fire" interval="2000" chance="18" range="7" radius="1" target="1" min="-260" max="-550">
+			<attribute key="shootEffect" value="explosion"/>
+			<attribute key="areaEffect" value="skullvertical"/>
+		</attack>
+		<attack name="energyfield" interval="2500" chance="22" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+		<attack name="physical" interval="2400" chance="22" range="7" min="-350" max="-550">
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="ferumbras"/>
+		</attack>
+		<attack name="poison" interval="2300" chance="25" range="7" min="-300" max="-500">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="35">
+		<defense name="healing" interval="1000" chance="25" min="1200" max="2000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="200" chance="35" speedchange="500" duration="10000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element energyPercent="80"/>
+		<element earthPercent="55"/>
+		<element holyPercent="30"/>
+		<element icePercent="50"/>
+		<element deathPercent="-10"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="I have mastered the magic arts!"/>
+		<voice sentence="Kaplar!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="40" chance="37000"/><!-- gold coin -->
+		<item id="2684" countmax="8" chance="7150"/><!-- carrot -->
+		<item id="2189" chance="10000"/><!-- wand of cosmic energy -->
+		<item id="2195" chance="2000"/><!-- boots of haste -->
+		<item id="2184" chance="1000"/><!-- crystal wand -->
+		<item id="7898" chance="2000"/><!-- lightning robe -->
+		<item id="9778" chance="1200"/><!-- yalahari mask -->
+		<item id="8867" chance="790"/><!-- dragon robe -->
+	</loot>
+</monster>

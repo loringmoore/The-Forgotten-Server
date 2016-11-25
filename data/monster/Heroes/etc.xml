@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="E.T.C." nameDescription="E.T.C." race="blood" experience="7000" speed="290" manacost="0">
+	<health now="5300" max="5300"/>
+	<look type="578" head="91" body="116" legs="101" feet="58" corpse="5983"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag targetdistance="1"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1000" skill="90" attack="60" />
+		<attack name="speed" interval="5000" chance="7" range="7" radius="4" target="0" speedchange="-300000" duration="4000">
+			<attribute key="areaEffect" value="bluenote"/>
+		</attack>
+		<attack name="melee" interval="2000" chance="20" range="7" radius="5" target="0" min="-250" max="-500">
+			<attribute key="areaEffect" value="purplenote"/>
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="38">
+		<defense name="speed" interval="3000" chance="15" speedchange="1500" duration="2000">
+			<attribute key="areaEffect" value="yellownote"/>
+		</defense>
+		<defense name="healing" interval="2000" chance="15" min="100" max="200">
+			<attribute key="areaEffect" value="greennote"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="60"/>
+	</elements>
+	<immunities>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="Let's shred!"/>
+		<voice sentence="Time to get my axe wet!"/>
+		<voice sentence="I bring the mega death!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="18000"/><!-- gold coin -->
+		<item id="2148" countmax="100" chance="18000"/><!-- gold coin -->
+		<item id="2148" countmax="38" chance="18000"/><!-- gold coin -->
+		<item id="2152" countmax="10" chance="8000"/><!-- platinum coin -->
+		<item id="2431" chance="200"/><!-- stonecutter axe -->
+		<item id="2268" countmax="10" chance="1850"/><!-- sudden death rune -->
+		<item id="2187" chance="2000"/><!-- wand of inferno -->
+		<item id="5878" countmax="8" chance="1000"/><!-- minotaur leather -->
+		<item id="2645" chance="1000"/><!-- steel boots -->
+	</loot>
+</monster>

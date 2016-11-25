@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Cyclops Clairvoyant" nameDescription="a cyclops clairvoyant" race="blood" experience="450" speed="220" manacost="0">
+	<health now="400" max="400"/>
+	<look type="22" corpse="5962"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="60" attack="30"/>
+		<attack name="energy" interval="1000" chance="30" range="7" min="-55" max="-95">
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+		<attack name="poison" interval="1000" chance="25" range="7" min="-45" max="-90">
+			<attribute key="shootEffect" value="smallstone"/>
+		</attack>
+		<attack name="ice" interval="2000" chance="21" length="4" spread="2" min="-70" max="-150">
+			<attribute key="areaEffect" value="whitenote"/>
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="21">
+		<defense name="healing" interval="2000" chance="25" min="50" max="110">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element energyPercent="25"/>
+		<element holyPercent="20"/>
+		<element earthPercent="-10"/>
+		<element deathPercent="-10"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Il lorstok human!"/>
+		<voice sentence="Toks utat."/>
+		<voice sentence="Human, uh whil dyh!"/>
+		<voice sentence="Youh ah trak!"/>
+		<voice sentence="Let da mashing begin!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="33" chance="22500"/><!-- gold coin -->
+		<item id="2148" countmax="22" chance="22500"/><!-- gold coin -->
+		<item id="2671" countmax="4" chance="4500"/><!-- ham -->
+		<item id="2666" countmax="3" chance="18333"/><!-- meat -->
+		<item id="2510" chance="2500"/><!-- plate shield -->
+		<item id="1947" chance="7000"/><!-- blank paper -->
+		<item id="2532" chance="1300"/><!-- ancient shield -->
+		<item id="2129" chance="400"/><!-- wolf tooth chain -->
+		<item id="2192" chance="800"/><!-- crystal ball -->
+		<item id="7902" chance="50"/><!-- glacier mask -->
+		<item id="8911" chance="100"/><!-- glacier rod -->
+		<item id="7398" chance="70"/><!-- cyclops trophy -->
+	</loot>
+</monster>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Elf Assassin" nameDescription="an elf assassin" race="blood" experience="2300" speed="300" manacost="0">
+	<health now="1800" max="1800"/>
+	<look type="152" head="114" body="114" legs="0" feet="0" addons="3" corpse="6012"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="50"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="10" attack="20"/>
+		<attack name="physical" interval="2100" chance="20" range="7" min="-90" max="-200">
+			<attribute key="shootEffect" value="arrow"/>
+		</attack>
+		<attack name="fire" interval="2700" chance="15" range="7" radius="2" target="1" min="-95" max="-195">
+			<attribute key="shootEffect" value="burstarrow"/>
+			<attribute key="areaEffect" value="explosion"/>
+		</attack>
+		<attack name="physical" interval="2300" chance="16" range="7" min="-130" max="-180">
+			<attribute key="shootEffect" value="throwingknife"/>
+		</attack>
+		<attack name="physical" interval="2400" chance="15" range="7" min="-130" max="-190">
+			<attribute key="shootEffect" value="throwingstar"/>
+		</attack>
+		<attack name="poison" interval="2600" chance="14" range="7" min="-60" max="-120">
+			<attribute key="shootEffect" value="poisonarrow"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="35">
+		<defense name="healing" interval="1000" chance="13" min="100" max="200">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="15" speedchange="400" duration="20000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element energyPercent="80"/>
+		<element earthPercent="55"/>
+		<element holyPercent="30"/>
+		<element icePercent="50"/>
+		<element deathPercent="-10"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="You will make great target practice!"/>
+		<voice sentence="I will unleash a storm of blades!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="40000"/><!-- gold coin -->
+		<item id="2148" countmax="90" chance="40000"/><!-- gold coin -->
+		<item id="2152" countmax="2" chance="30850"/><!-- platinum coin -->
+		<item id="2680" chance="3000"/><!-- strawberry -->
+		<item id="2399" countmax="4" chance="9750"/><!-- throwing star -->
+		<item id="2545" chance="7000"/><!--elven amulet -->
+		<item id="5921" chance="9050"/><!-- heaven blossom -->
+		<item id="7730" chance="50"/><!-- blue legs -->
+		<item id="2197" chance="5500"/><!-- stone skin amulet -->
+		<item id="7731" chance="4500"/><!-- elvenhair rope -->
+		<item id="8891" chance="200"/><!-- paladin armor -->
+	</loot>
+</monster>

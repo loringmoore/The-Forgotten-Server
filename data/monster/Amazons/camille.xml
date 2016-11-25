@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Baemille" nameDescription="Baemille" race="blood" experience="8500" speed="376" manacost="0">
+	<health now="6190" max="6190"/>
+	<look type="156" head="114" body="114" legs="114" feet="114" addons="3" corpse="6081"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="65" attack="80"/>
+		<attack name="physical" interval="1000" chance="15" range="7" min="-145" max="-550">
+			<attribute key="shootEffect" value="throwingstar"/>
+		</attack>
+		<attack name="physical" interval="2000" chance="38" radius="6" target="0" min="-200" max="-540">
+			<attribute key="areaEffect" value="ferumbras"/>
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="55">
+		<defense name="healing" interval="1000" chance="25" min="290" max="400">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="15" speedchange="200" duration="20000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="10"/>
+		<element firePercent="10"/>
+		<element holyPercent="5"/>
+		<element deathPercent="-1"/>
+		<element physicalPercent="-1"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="YAAAAAAAASSSSSSSSS!"/>
+		<voice sentence="So, you think you're really pretty?"/>
+		<voice sentence="I want to lose three pounds!"/>
+		<voice sentence="On Wednesdays we wear pink"/>
+		<voice sentence="Have you seen Mr Bae?"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="12" chance="20000"/><!-- gold coin -->
+		<item id="2666" countmax="3" chance="20000"/><!-- meat -->
+		<item id="2688" countmax="15" chance="10000"/><!-- candy cane -->
+		<item id="2229" countmax="2" chance="55500"/><!-- skull -->
+		<item id="2148" countmax="24" chance="5750"/><!-- throwing star -->
+		<item id="7893" chance="1500"/><!-- lightning boots -->
+		<item id="2125" chance="850"/><!-- crystal necklace -->
+		<item id="2387" chance="800"/><!-- double axe -->
+		<item id="2200" chance="1000"/><!-- protection amulet -->
+		<item id="9929" chance="5000"/><!-- flower dress -->
+		<item id="2527" chance="2000"/><!-- rose shield -->
+		<item id="2139" chance="2000"/><!-- ancient tiara -->
+	</loot>
+</monster>

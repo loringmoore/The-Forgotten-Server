@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Minotaur Sharpshooter" nameDescription="a minotaur sharpshooter" race="blood" experience="15000" speed="370" manacost="0">
+	<health now="10000" max="10000"/>
+	<look type="574" head="114" body="87" legs="76" feet="95" corpse="5982"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="5"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="30" attack="35"/>
+		<attack name="physical" interval="1000" chance="74" range="7" min="-350" max="-575">
+			<attribute key="shootEffect" value="powerbolt"/>
+		</attack>
+	</attacks>
+	<defenses armor="7" defense="8"/>
+	<elements>
+		<element firePercent="20"/>
+		<element holyPercent="10"/>
+		<element icePercent="-10"/>
+		<element deathPercent="-5"/>
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Ruan Wihmpy!"/>
+		<voice sentence="Kaplar!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="28" chance="18000"/><!-- gold coin -->
+		<item id="2543" countmax="53" chance="26500"/><!-- bolt -->
+		<item id="2547" countmax="20" chance="10000"/><!-- power bolt -->
+		<item id="6529" countmax="13" chance="6500"/><!-- infernal bolt -->
+		<item id="2458" chance="5000"/><!-- chain helmet -->
+		<item id="2455" chance="9500"/><!-- crossbow -->
+		<item id="2666" countmax="28" chance="9500"/><!-- meat -->
+		<item id="9777" chance="1500"/><!-- yalahari leg piece -->
+		<item id="2487" chance="750"/><!--  crown armor-->
+		<item id="5878" chance="2000"/><!-- minotaur leather -->
+		<item id="2481" chance="700"/><!-- soldier helmet -->
+		<item id="2467" chance="2500"/><!-- knight armor -->
+		<item id="2464" chance="7000"/><!-- chain armor -->
+		<item id="2648" chance="7500"/><!-- chain legs -->
+		<item id="2513" chance="3000"/><!-- battle shield -->
+		<item id="15644" chance="900"/><!-- ornate crossbow -->
+		<item id="5878" countmax="4" chance="1100"/><!-- minotaur leather -->
+	</loot>
+</monster>

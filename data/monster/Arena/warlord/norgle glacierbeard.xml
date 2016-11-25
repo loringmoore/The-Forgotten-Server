@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Norgle Glacierbeard" nameDescription="norgle glacierbeard" race="blood" experience="8100" speed="595" manacost="0">
+	<health now="10000" max="10000"/>
+	<look type="257" corpse="7330"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag targetdistance="1"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="90" attack="60"/>
+		<attack name="ice" interval="2000" chance="25" range="7" radius="4" target="1" min="-345" max="-565">
+			<attribute key="shootEffect" value="snowball"/>
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+		<attack name="ice" interval="3000" chance="28" length="5" spread="3" min="-490" max="-650">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="27"/>
+	<elements>
+		<element deathPercent="-15"/>
+		<element energyPercent="-10"/>
+	</elements>
+	<immunities>
+		<immunity ice="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="I'll extinguish you warmbloods."/>
+		<voice sentence="REVENGE!"/>
+		<voice sentence="Far too hot."/>
+		<voice sentence="DISGUSTING WARMBLOODS!"/>
+		<voice sentence="Revenge is sweetest when served cold."/>
+	</voices>
+</monster>

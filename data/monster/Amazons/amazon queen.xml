@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Amazon Queen" nameDescription="an amazon queen" race="blood" experience="10000" speed="576" manacost="0">
+	<health now="14350" max="14350"/>
+	<look type="139" head="115" body="90" legs="94" feet="79" addons="3" corpse="6081"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="10"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="125" attack="100"/>
+		<attack name="physical" interval="1000" chance="25" range="7" min="-305" max="-500">
+			<attribute key="shootEffect" value="envenomedarrow"/>
+		</attack>
+		<attack name="melee" interval="2000" chance="30" range="7" radius="1" target="1" min="-325" max="-485">
+			<attribute key="shootEffect" value="whirlwindsword"/>
+			<attribute key="areaEffect" value="redspark"/>
+		</attack>
+		<attack name="fire" interval="3000" chance="25" length="8" spread="3" min="-395" max="-460">
+			<attribute key="areaEffect" value="yellowfirework"/>
+		</attack>
+		<attack name="death" interval="1000" chance="25" range="7" radius="3" target="0" min="-450" max="-600">
+			<attribute key="areaEffect" value="ferumbras"/>
+		</attack>
+	</attacks>
+	<defenses armor="52" defense="24"/>
+	<elements>
+		<element icePercent="10"/>
+		<element firePercent="10"/>
+		<element holyPercent="5"/>
+		<element deathPercent="15"/>
+		<element physicalPercent="15"/>
+	</elements>
+	<voices interval="5000" chance="20">
+		<voice sentence="'Til Death!"/>
+		<voice sentence="Head off!"/>
+		<voice sentence="The might Amazon will never fall!"/>
+		<voice sentence="I will sever your head from your body!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="12" chance="20000"/><!-- gold coin -->
+		<item id="2666" countmax="3" chance="20000"/><!-- meat -->
+		<item id="2674" countmax="4" chance="10000"/><!-- apple -->
+		<item id="2229" countmax="5" chance="55500"/><!-- skull -->
+		<item id="2379" chance="15000"/><!-- dagger -->
+		<item id="2498" chance="7000"/><!-- royal helmet -->
+		<item id="2657" chance="8000"/><!-- simple dress -->
+		<item id="2389" countmax="8" chance="10000"/><!-- spear -->
+		<item id="2476" chance="2500"/><!-- plate armor -->
+		<item id="2125" chance="850"/><!-- crystal necklace -->
+		<item id="7456" chance="2800"/><!-- noble axe -->
+		<item id="18465" chance="100"/><!-- shiny blade -->
+		<item id="2499" chance="1500"/><!-- amazon helmet -->
+		<item id="2500" chance="1200"/><!-- amazon armor -->
+		<item id="2537" chance="1200"/><!-- amazon shield -->
+	</loot>
+</monster>

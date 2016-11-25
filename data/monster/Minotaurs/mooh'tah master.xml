@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mooh'tah Master" nameDescription="mooh'tah master" race="blood" experience="25000" speed="590" manacost="0">
+	<health now="20000" max="20000"/>
+	<look type="578" head="113" body="100" legs="100" feet="79" corpse="5983"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag targetdistance="1"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="130" attack="150" poison="1800"/>
+		<attack name="fire" interval="3000" chance="30" min="-400" max="-680" length="8" spread="3">
+			<attribute key="areaEffect" value="skullvertical"/>
+		</attack>
+		<attack name="drown" interval="2000" chance="25" range="7" radius="5" target="1" min="-350" max="-550">
+			<attribute key="shootEffect" value="energy"/>
+			<attribute key="areaEffect" value="energy"/>
+		</attack>
+		<attack name="physical" interval="2900" chance="29" range="7" min="-350" max="-590">
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="ferumbras"/>
+		</attack>
+		<attack name="physical" interval="2000" chance="30" radius="3" min="-400" max="-620">
+			<attribute key="areaEffect" value="explosion"/>
+		</attack>
+		<attack name="poison" interval="5000" chance="30" length="8" spread="3" min="-460" max="-630">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="33"/>
+	<elements>
+		<element firePercent="60"/>
+	</elements>
+	<immunities>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="I will finish you!"/>
+		<voice sentence="You are no match for a master of the Mooh'Tha!"/>
+		<voice sentence="I am at full power!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="18000"/><!-- gold coin -->
+		<item id="2148" countmax="100" chance="18000"/><!-- gold coin -->
+		<item id="2148" countmax="38" chance="18000"/><!-- gold coin -->
+		<item id="2152" countmax="10" chance="8000"/><!-- platinum coin -->
+		<item id="2431" chance="200"/><!-- stonecutter axe -->
+		<item id="2268" countmax="10" chance="1850"/><!-- sudden death rune -->
+		<item id="2187" chance="2000"/><!-- wand of inferno -->
+		<item id="5878" countmax="8" chance="1000"/><!-- minotaur leather -->
+		<item id="2645" chance="1000"/><!-- steel boots -->
+	</loot>
+</monster>
