@@ -1,11 +1,14 @@
 local combat = createCombatObject()
 setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
-setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_FIREATTACK)
-setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_FIRE)
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_SKULLVERTICAL)
+setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_EXPLOSION)
+
+local area = createCombatArea(AREA_CIRCLE3X3)
+setCombatArea(combat, area)
 
 function onGetFormulaValues(cid, level, maglevel)
-	min = -((level / 5) + (maglevel * 4.5) + 35)
-	max = -((level / 5) + (maglevel * 7.3) + 55)
+	min = -((level / 5) + (maglevel * 2.8) + 16)
+	max = -((level / 5) + (maglevel * 4.4) + 28)
 	return min, max
 end
 

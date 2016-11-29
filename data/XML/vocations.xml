@@ -20,7 +20,7 @@
 		<skill id="5" multiplier="1.1" />
 		<skill id="6" multiplier="1.1" />
 	</vocation>
-	<vocation id="2" clientid="2" name="Berserker" description="a berserker" gaincap="25" gainhp="25" gainmana="15" gainhpticks="0" gainhpamount="0" gainmanaticks="0" gainmanaamount="0" manamultiplier="2.0" attackspeed="1000" basespeed="220" soulmax="100" gainsoulticks="120" fromvoc="2">
+	<vocation id="2" clientid="2" name="Berserker" description="a berserker" gaincap="25" gainhp="25" gainmana="15" gainhpticks="0" gainhpamount="0" gainmanaticks="0" gainmanaamount="0" manamultiplier="2.0" attackspeed="1500" basespeed="220" soulmax="100" gainsoulticks="120" fromvoc="2">
 		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
 		<skill id="0" multiplier="1.1" />
 		<skill id="1" multiplier="1.1" />

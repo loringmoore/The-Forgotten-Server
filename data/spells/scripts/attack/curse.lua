@@ -1,30 +1,17 @@
-local combat = createCombatObject()
-setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_DEATHDAMAGE)
-setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_SMALLCLOUDS)
-setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_DEATH)
-
-local condition = createConditionObject(CONDITION_CURSED)
-setConditionParam(condition, CONDITION_PARAM_DELAYED, 1)
-
-addDamageCondition(condition, 1, 3000, -45)
-addDamageCondition(condition, 1, 3000, -40)
-addDamageCondition(condition, 1, 3000, -35)
-addDamageCondition(condition, 1, 3000, -34)
-addDamageCondition(condition, 2, 3000, -33)
-addDamageCondition(condition, 2, 3000, -32)
-addDamageCondition(condition, 2, 3000, -31)
-addDamageCondition(condition, 2, 3000, -30)
-addDamageCondition(condition, 3, 3000, -29)
-addDamageCondition(condition, 3, 3000, -25)
-addDamageCondition(condition, 3, 3000, -24)
-addDamageCondition(condition, 4, 3000, -23)
-addDamageCondition(condition, 4, 3000, -20)
-addDamageCondition(condition, 5, 3000, -19)
-addDamageCondition(condition, 5, 3000, -15)
-addDamageCondition(condition, 6, 3000, -10)
-addDamageCondition(condition, 10, 3000, -5)
-setCombatCondition(combat, condition)
+local combat = {}
+for i = 0, 999 do
+	combat[i] = createCombatObject()
+	setCombatParam(combat[i], COMBAT_PARAM_TARGETCASTERORTOPMOST, true)
+	setCombatParam(combat[i], COMBAT_PARAM_TYPE, COMBAT_DEATHDAMAGE)
+	setCombatParam(combat[i], COMBAT_PARAM_EFFECT, CONST_ME_MORTAREA)
+	setCombatParam(combat[i], COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_DEATH)
+	
+	local condition = createConditionObject(CONDITION_CURSED)
+	setConditionParam(condition, CONDITION_PARAM_DELAYED, true)
+	addDamageCondition(condition, 10, 2000, -i*1.15)
+	setCombatCondition(combat[i], condition)
+end
 
 function onCastSpell(cid, var)
-	return doCombat(cid, combat, var)
+	return doCombat(cid, combat[getPlayerMagLevel(cid)], var)
 end

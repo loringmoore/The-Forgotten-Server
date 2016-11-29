@@ -1,13 +1,13 @@
 local combat = createCombatObject()
-setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
-setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_HITBYFIRE)
+setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_ICEDAMAGE)
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_ICEATTACK)
 
-local area = createCombatArea(AREA_WAVE4, AREADIAGONAL_WAVE4)
+local area = createCombatArea(AREA_BEAM5, AREADIAGONAL_BEAM5)
 setCombatArea(combat, area)
 
 function onGetFormulaValues(cid, level, maglevel)
-	min = -8
-	max = -11
+	min = -((level / 5) + (maglevel * 2.5) + 35)
+	max = -((level / 5) + (maglevel * 4.3) + 55)
 	return min, max
 end
 

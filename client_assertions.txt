@@ -17,3 +17,41 @@ Communication.cpp 3392: exception occurred, reason:
 Creatures.cpp 1463: assertion failed (Spell = 176) (Delay = 2000), reason:
 Spell < SPELL_BEYONDLAST
 Comment: 
+----- 25/11/2016 18:12:39 - Sinister (192.168.1.1) -----
+Debug Assertion 10.41 Map.cpp 1014
+Fri Nov 25 18:10:42 2016
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in USA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 131 180 131 106 140 160 160 134 107 109
+Last Packet: 131 082 004 058 004 007 000 000 000 000 000 000 000 000 000 000
+Player Position: [1105,1082,7]
+Player Name: Sinister (Forgotten)
+Player Action: 048 046 048 046 048 046 048 058 055 049 055 050
+Player.cpp 343: exception occurred, reason:
+MainFrm.cpp 530: exception occurred (nIDEvent = 1), reason:
+Control.cpp 1641: exception occurred, reason:
+Map.cpp 1027: exception occurred (i = 2), reason:
+Map.cpp 1014: assertion failed (Effect.Type = 0), reason:
+Effect.Type > 0
+Comment: 
+----- 25/11/2016 18:28:09 - Lobo (192.168.1.1) -----
+Debug Assertion 10.41 Map.cpp 1014
+Fri Nov 25 18:12:51 2016
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in USA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 131 109 160 160 109 109 103 109 160 160
+Last Packet: 131 081 004 059 004 007 000 000 000 000 000 000 000 000 000 000
+Player Position: [1104,1082,7]
+Player Name: Sinister (Forgotten)
+Player Action: 048 046 048 046 048 046 048 058 055 049 055 050
+Player.cpp 343: exception occurred, reason:
+MainFrm.cpp 530: exception occurred (nIDEvent = 1), reason:
+Control.cpp 1641: exception occurred, reason:
+Map.cpp 1027: exception occurred (i = 0), reason:
+Map.cpp 1014: assertion failed (Effect.Type = 0), reason:
+Effect.Type > 0
+Comment: 

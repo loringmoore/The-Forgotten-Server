@@ -1,16 +1,17 @@
 local combat = createCombatObject()
 setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_ICEDAMAGE)
-setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_ICEATTACK)
-setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_SMALLICE)
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_FIREWORK_BLUE)
+setCombatFormula(combat, COMBAT_FORMULA_LEVELMAGIC, -1.3, -30, -1.7, 0)
 
-function onGetFormulaValues(cid, level, maglevel)
-	min = -((level / 5) + (maglevel * 2.8) + 16)
-	max = -((level / 5) + (maglevel * 4.4) + 28)
-	return min, max
-end
-
-setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
+local distanceCombat = createCombatObject()
+setCombatParam(distanceCombat, COMBAT_PARAM_TYPE, COMBAT_ICEDAMAGE)
+setCombatParam(distanceCombat, COMBAT_PARAM_EFFECT, CONST_ME_FIREWORK_BLUE)
+setCombatParam(distanceCombat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_SMALLICE)
+setCombatFormula(distanceCombat, COMBAT_FORMULA_LEVELMAGIC, -1.3, -30, -1.7, 0)
 
 function onCastSpell(cid, var)
+	if(variantToNumber(var) ~= 0) then
+		return doCombat(cid, distanceCombat, var)
+	end
 	return doCombat(cid, combat, var)
 end

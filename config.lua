@@ -70,7 +70,7 @@ allowChangeOutfit = "yes"
 freePremium = "yes"
 kickIdlePlayerAfterMinutes = 200
 maxMessageBuffer = 4
-emoteSpells = "no"
+emoteSpells = "yes"
 classicEquipmentSlots = "yes"
 
 -- Rates

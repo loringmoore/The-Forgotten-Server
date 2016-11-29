@@ -360,7 +360,7 @@
 	<monster name="Little Corym Charlatan" file="Corym/little corym charlatan.xml"/>
 
 	<!-- Crustaceans -->
-	<monster name="Blood Crab" file="Crustaceans/blood crab underwater.xml"/>
+	<monster name="Blood Crab Underwater" file="Crustaceans/blood crab underwater.xml"/>
 	<monster name="Blood Crab" file="Crustaceans/blood crab.xml"/>
 	<monster name="Crab" file="Crustaceans/crab.xml"/>
 	<monster name="Crustacea Gigantica" file="Crustaceans/crustacea gigantica.xml"/>
