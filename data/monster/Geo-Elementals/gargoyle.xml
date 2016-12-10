@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Gargoyle" nameDescription="a gargoyle" race="blood" experience="150" speed="250" manacost="0">
-	<health now="450" max="450"/>
+<monster name="Gargoyle" nameDescription="a gargoyle" race="undead" experience="150" speed="250" manacost="0">
+	<health now="250" max="250"/>
 	<look type="95" corpse="6027"/>
 	<targetchange interval="5000" chance="8"/>
 	<strategy attack="100" defense="0"/>

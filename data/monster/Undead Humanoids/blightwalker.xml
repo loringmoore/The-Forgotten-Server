@@ -19,12 +19,16 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="88" attack="100"/>
-		<attack name="physical" interval="1500" chance="34" range="7" min="-105" max="-155">
-			<attribute key="shootEffect" value="smallstone"/>
+		<attack name="poison" interval="2000" chance="20" range="7" target="1" radius="1" min="-220" max="-405">
+			<attribute key="shootEffect" value="poison" />
 		</attack>
-		<attack name="manadrain" interval="2000" chance="25" range="7" min="-140" max="-220">
-			<attribute key="areaEffect" value="redshimmer"/>
+		<attack name="lifedrain" interval="2000" chance="15" target="0" radius="4" min="-65" max="-135">
+			<attribute key="areaEffect" value="greenshimmer" />
 		</attack>
+		<attack name="drunk" interval="2000" chance="10" target="0" radius="3" duration="5000">
+			<attribute key="areaEffect" value="greenspark" />
+		</attack>
+		<attack name="blightwalker curse" interval="2000" chance="15" />
 	</attacks>
 	<defenses armor="15" defense="15">
 		<defense name="healing" interval="1000" chance="50" min="75" max="125">

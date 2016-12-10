@@ -26,6 +26,7 @@ local function CastSpell(cid, var)
     max = -((level / 5) + (maglevel * 0.9) + 7)
     condition:setParameter(CONDITION_PARAM_PERIODICDAMAGE, math.random(min,max))
     combat:setCondition(condition)
+	return true
     end
    
 function onCastSpell(creature, var)

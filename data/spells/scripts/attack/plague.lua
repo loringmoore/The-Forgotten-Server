@@ -1,6 +1,6 @@
 local combat = Combat()
 combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_POISONDAMAGE)
-combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_INSECTS)
+combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_HITBYPOISON)
 
 local area = createCombatArea(AREA_CIRCLE3X3)
 combat:setArea(area)
@@ -26,6 +26,7 @@ local function CastSpell(cid, var)
     max = -((level / 5) + (maglevel * 0.7) + 7)
     condition:setParameter(CONDITION_PARAM_PERIODICDAMAGE, math.random(min,max))
     combat:setCondition(condition)
+	return true
     end
    
 function onCastSpell(creature, var)

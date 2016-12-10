@@ -15,17 +15,22 @@
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="1"/>
 		<flag staticattack="70"/>
-		<flag runonhealth="3100"/>
+		<flag runonhealth="6100"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="70" attack="130"/>
-		<attack name="manadrain" interval="2000" chance="25" range="7" min="-150" max="-800">
-			<attribute key="areaEffect" value="blueshimmer"/>
+		<attack name="melee" interval="2000" skill="70" attack="130" poison="380" />
+		<attack name="physical" interval="2000" chance="15" range="1" target="1" min="-145" max="-365">
+			<attribute key="areaEffect" value="ferumbras"/>
 		</attack>
-		<attack name="drunk" interval="1000" chance="12" range="1" target="1"/>
+		<attack name="manadrain" interval="2000" chance="25" range="1" min="-150" max="-800">
+			<attribute key="areaEffect" value="ferumbras"/>
+		</attack>
+		<attack name="drunk" interval="2000" chance="10" target="0" radius="5" duration="3000">
+			<attribute key="areaEffect" value="bluebubble" />
+		</attack>
 	</attacks>
 	<defenses armor="25" defense="35">
-		<defense name="speed" interval="3000" chance="12" speedchange="380" duration="8000">
+		<defense name="speed" interval="3000" chance="12" speedchange="10000" duration="5000">
 			<attribute key="areaEffect" value="redshimmer"/>
 		</defense>
 		<defense name="invisible" interval="4000" chance="50" duration="6000">
@@ -33,9 +38,6 @@
 		</defense>
 		<defense name="healing" interval="2000" chance="50" min="100" max="250">
 			<attribute key="areaEffect" value="blueshimmer"/>
-		</defense>
-		<defense name="speed" interval="1000" chance="35" speedchange="370" duration="30000">
-			<attribute key="areaEffect" value="redshimmer"/>
 		</defense>
 	</defenses>
 	<elements>

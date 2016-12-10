@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Braindeath" nameDescription="a braindeath" race="undead" experience="895" speed="270" manacost="0">
+<monster name="Braindeath" nameDescription="a braindeath" race="venom" experience="895" speed="270" manacost="0">
 	<health now="1225" max="1225"/>
 	<look type="256" corpse="7256"/>
 	<targetchange interval="5000" chance="8"/>
@@ -23,11 +23,11 @@
 			<attribute key="shootEffect" value="energy"/>
 		</attack>
 		<attack name="fire" interval="2000" chance="20" range="7" min="-60" max="-80">
-			<attribute key="shootEffect" value="fire"/>
+			<attribute key="shootEffect" value="explosion"/>
 		</attack>
 		<attack name="physical" interval="2000" chance="20" range="7" min="-70" max="-290">
-			<attribute key="shootEffect" value="suddendeath"/>
-			<attribute key="areaEffect" value="mortarea"/>
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="ferumbras"/>
 		</attack>
 		<attack name="poison" interval="2000" chance="25" range="7" min="-30" max="-70">
 			<attribute key="shootEffect" value="poison"/>
@@ -43,8 +43,11 @@
 		</attack>
 	</attacks>
 	<defenses armor="13" defense="26">
-		<defense name="healing" interval="2000" chance="30" min="0" max="1">
+		<defense name="healing" interval="2000" chance="30" min="150" max="200">
 			<attribute key="areaEffect" value="energy"/>
+		</defense>
+		<defense name="effect" interval="2000" chance="10" radius="1">
+			<attribute key="areaEffect" value="ferumbras" />
 		</defense>
 	</defenses>
 		<elements>
@@ -58,7 +61,7 @@
 		<immunity death="1"/>
 		<immunity invisible="1"/>
 	</immunities>
-	<summons maxSummons="3">
+	<summons maxSummons="4">
 		<summon name="Vampire" interval="2000" chance="10"/>
 	</summons>
 	<voices interval="5000" chance="10">

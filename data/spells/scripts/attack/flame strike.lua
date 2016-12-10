@@ -6,7 +6,7 @@ setCombatFormula(combat, COMBAT_FORMULA_LEVELMAGIC, -0.4, 0, -0.5, 0)
 local distanceCombat = createCombatObject()
 setCombatParam(distanceCombat, COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
 setCombatParam(distanceCombat, COMBAT_PARAM_EFFECT, CONST_ME_SKULLVERTICAL)
-setCombatParam(distanceCombat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_FIRE)
+setCombatParam(distanceCombat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_EXPLOSION)
 setCombatFormula(distanceCombat, COMBAT_FORMULA_LEVELMAGIC, -0.4, 0, -0.5, 0)
 
 function onCastSpell(cid, var)

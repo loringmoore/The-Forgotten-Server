@@ -17435,9 +17435,6 @@
 		<attribute key="weight" value="1500" />
 		<attribute key="defense" value="25" />
 		<attribute key="speed" value="50" />
-		<attribute key="decayTo" value="0" />
-		<attribute key="duration" value="86400" />
-		<attribute key="showduration" value="1" />
 	</item>
 	<item id="9957" article="a" name="yalahar coal basin" />
 	<item id="9958" article="a" name="royal tapestry">

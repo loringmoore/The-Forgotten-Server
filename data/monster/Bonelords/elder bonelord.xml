@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Elder Beholder" nameDescription="an elder beholder" race="blood" experience="280" speed="270" manacost="0">
-	<health now="1100" max="1100"/>
+<monster name="Elder Beholder" nameDescription="an elder beholder" race="venom" experience="280" speed="270" manacost="0">
+	<health now="500" max="500"/>
 	<look type="108" corpse="6037"/>
 	<targetchange interval="5000" chance="8"/>
 	<strategy attack="100" defense="0"/>
@@ -23,17 +23,14 @@
 			<attribute key="shootEffect" value="energy"/>
 		</attack>
 		<attack name="fire" interval="1000" chance="7" range="7" min="-60" max="-80">
-			<attribute key="shootEffect" value="fire"/>
+			<attribute key="shootEffect" value="explosion"/>
 		</attack>
 		<attack name="physical" interval="1000" chance="9" range="7" min="-70" max="-90">
-			<attribute key="shootEffect" value="suddendeath"/>
-			<attribute key="areaEffect" value="mortarea"/>
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="ferumbras"/>
 		</attack>
 		<attack name="poison" interval="1000" chance="8" range="7" min="-30" max="-70">
 			<attribute key="shootEffect" value="poison"/>
-		</attack>
-		<attack name="lifedrain" interval="1000" chance="6" range="7" min="-75" max="-85">
-			<attribute key="areaEffect" value="redshimmer"/>
 		</attack>
 		<attack name="lifedrain" interval="1000" chance="6" range="7" min="-75" max="-85">
 			<attribute key="areaEffect" value="redshimmer"/>

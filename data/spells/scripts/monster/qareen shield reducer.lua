@@ -1,28 +1,23 @@
 local combat = Combat()
-combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_SOUND_RED)
+combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE)
+combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_YELLOW_RINGS)
 
-local condition = Condition(CONDITION_ATTRIBUTES)
-condition:setParameter(CONDITION_PARAM_TICKS, 12000)
-condition:setParameter(CONDITION_PARAM_SKILL_SHIELDPERCENT, 100)
-condition:setParameter(CONDITION_PARAM_SKILL_MELEEPERCENT, 95)
-condition:setParameter(CONDITION_PARAM_SKILL_DISTANCEPERCENT, 80)
 
 local area = createCombatArea({
-	{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-	{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-	{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-	{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-	{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-	{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-	{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-	{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-	{0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
-	{0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
-	{0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-	{0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0}
+	{1, 1, 1},
+	{1, 1, 1},
+	{0, 1, 0},
+	{0, 1, 0},
+	{0, 3, 0},
 })
 combat:setArea(area)
 combat:setCondition(condition)
+
+function onGetFormulaValues(cid)
+    min = -(100)
+    max = -(200)
+    return min, max
+end
 
 function onCastSpell(creature, var)
 	return combat:execute(creature, var)
