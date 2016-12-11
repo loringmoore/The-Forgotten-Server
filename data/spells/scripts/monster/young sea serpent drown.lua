@@ -1,15 +1,27 @@
-local combat = Combat()
-combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_DROWNDAMAGE)
-combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_WATERSPLASH)
+local combat = {}
 
-local condition = Condition(CONDITION_DROWN)
-condition:setParameter(CONDITION_PARAM_DELAYED, 1)
-condition:addDamage(6, 5000, -20)
+for i = 100, 200 do
+	combat[i] = Combat()
+	combat[i]:setParameter(COMBAT_PARAM_TYPE, COMBAT_ENERYDAMAGE)
+	combat[i]:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_PURPLEENERGY)
+	
+	local condition = Condition(CONDITION_ENERGY)
+	condition:setParameter(CONDITION_PARAM_DELAYED, 0)
+	
+	local damage = i
+	condition:addDamage(1, 4000, -damage)
 
-local area = createCombatArea(AREA_SQUARE1X1)
-combat:setArea(area)
-combat:setCondition(condition)
+	local area = createCombatArea({
+	{1, 1, 1, 1, 1},
+	{0, 1, 1, 1, 0},
+	{0, 1, 1, 1, 0},
+	{0, 0, 1, 0, 0},
+	{0, 0, 3, 0, 0},
+})
+	combat[i]:setArea(area)
+	combat[i]:setCondition(condition)
+end
 
 function onCastSpell(creature, var)
-	return combat:execute(creature, var)
+	return combat[math.random(100, 200)]:execute(creature, var)
 end

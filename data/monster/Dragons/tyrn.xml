@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Tyrn" nameDescription="a tyrn" race="blood" experience="6900" speed="300" manacost="0">
+	<health now="12000" max="12000"/>
+	<look type="562" corpse="21287"/>
+	<targetchange interval="2000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="50"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="1"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" attack="130" skill="70" />
+		<attack name="drunk" interval="2000" chance="10" radius="8" duration="25000">
+			<attribute key="areaEffect" value="yellownote" />
+		</attack>
+		<attack name="energy" interval="2000" chance="33" target="1" range="7" min="-100" max="-190">
+			<attribute value="energyball" key="shootEffect"/>
+			<attribute value="energyarea" key="areaEffect"/>
+		</attack>
+		<attack name="energy" max="-300" chance="12" interval="2000" radius="4" min="-200" target="1" range="7">
+			<attribute value="explosion" key="shootEffect"/>
+			<attribute value="explosion" key="areaEffect"/>
+		</attack>
+		<attack name="energy" interval="2000" chance="10" length="5" spread="0" min="-250" max="-750">
+			<attribute key="areaEffect" value="smoke" />
+		</attack>
+		<attack name="demon outcast skill reducer" chance="14" interval="2000"/>
+	</attacks>
+	<defenses armor="68" defense="58">
+		<defense name="healing" interval="2000" chance="33" min="200" max="300">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="invisible" chance="11" interval="2000" duration="6000">
+			<attribute value="energy" key="areaEffect"/>
+		</defense>
+		<defense name="vulcongra soulfire" chance="100" interval="1000"/>
+	</defenses>
+	<immunities>
+		<immunity energy="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+		<immunity lifedrain="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="GRRR!"/>
+		<voice sentence="GROOOOAAAAAAAAR!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="90" chance="30000"/><!-- gold coin -->
+		<item id="2148" countmax="80" chance="30000"/><!-- gold coin -->
+		<item id="2148" countmax="60" chance="30000"/><!-- gold coin -->
+		<item chance="60000" id="2152" countmax="8"/><!-- platinum coin -->
+		<item id="2672" countmax="3" chance="15000"/><!-- dragon ham -->
+		<item id="7588" chance="4750"/><!-- strong health potion -->
+		<item id="8921" chance="700"/><!-- wand of draconia -->
+		<item id="2145" countmax="3" chance="750"/><!-- small diamonds-->
+		<item chance="15000" id="2147" countmax="5"/><!-- small ruby -->
+		<item id="7589" chance="4000"/><!-- strong mana potion -->
+		<item id="7889" chance="650"/><!-- lightning pendant -->
+		<item id="8871" chance="600"/><!-- focus cape -->
+		<item id="8920" chance="550"/><!-- wand of starstorm -->
+		<item id="8873" chance="750"/><!-- hubiscus dress -->
+		<item id="7430" chance="300"/><!-- dragonbone staff -->
+		<item id="8855" chance="200"/><!-- composite hornbow -->
+		<item chance="9000" id="5911"/><!-- red piece of cloth -->
+		<item chance="15000" id="2268" subtype="5"/><!-- OK sudden death rune -->
+		<item chance="9000" id="2156"/><!-- red gem -->
+		<item chance="9000" id="2154"/><!-- yellow gem -->
+		<item chance="9000" id="2153"/><!-- violet gem -->
+		<item chance="9000" id="2158"/><!-- blue gem -->
+		<item id="2498" chance="600"/><!-- royal helmet -->
+		<item id="2195" chance="420"/><!-- boots of haste -->
+	</loot>
+</monster>

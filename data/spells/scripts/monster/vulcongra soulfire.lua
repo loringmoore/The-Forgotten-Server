@@ -1,15 +1,20 @@
-local combat = Combat()
-combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
-combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_HITBYFIRE)
+local condition = createConditionObject(CONDITION_REGENERATION)
+setConditionParam(condition, CONDITION_PARAM_SUBID, 88888)
+setConditionParam(condition, CONDITION_PARAM_TICKS, 15 * 60 * 1000)
+setConditionParam(condition, CONDITION_PARAM_HEALTHGAIN, 0.01)
+setConditionParam(condition, CONDITION_PARAM_HEALTHTICKS, 15 * 60 * 1000)
 
-local condition = Condition(CONDITION_FIRE)
-condition:setParameter(CONDITION_PARAM_DELAYED, 1)
-condition:addDamage(20, 9000, -10)
-
-local area = createCombatArea(AREA_SQUARE1X1)
-combat:setArea(area)
-combat:setCondition(condition)
-
-function onCastSpell(creature, var)
-	return combat:execute(creature, var)
+function onCastSpell(cid, var)
+    if isCreature(cid) == true then
+        if getCreatureHealth(cid) < getCreatureMaxHealth(cid) * 0.2 and getCreatureCondition(cid, CONDITION_REGENERATION, 88888) == false then
+            doAddCondition(cid, condition)
+	    local hp = math.random(5000, 7500)
+            doCreatureAddHealth(cid, hp)
+        else
+            return false
+        end
+    else
+        return false
+    end
+    return true
 end

@@ -234,6 +234,7 @@
 	<monster name="Strange Slime" file="Bio-Elementals/strange slime.xml"/>
 	<monster name="Swampling" file="Bio-Elementals/swampling.xml"/>
 	<monster name="Wilting Leaf Golem" file="Bio-Elementals/wilting leaf golem.xml"/>
+	
 
 	<!-- Birds -->
 	<monster name="Chicken" file="Birds/chicken.xml"/>
@@ -261,6 +262,7 @@
 	<monster name="Countess Sorrow" file="Bosses/countess sorrow.xml"/>
 	<monster name="Deadeye Devious" file="Bosses/deadeye devious.xml"/>
 	<monster name="Demodras" file="Bosses/demodras.xml"/>
+	<monster name="Rethin" file="Bosses/Rethin.xml"/>
 	<monster name="Dire Penguin" file="Bosses/dire penguin.xml"/>
 	<monster name="Koshei The Deathless" file="Bosses/koshei the deathless.xml"/>
 	<monster name="Dharalion" file="Bosses/dharalion.xml"/>
@@ -440,6 +442,7 @@
 	<monster name="Shadow Draptor" file="Dragons/shadow draptor.xml"/>
 	<monster name="Elder Wyrm" file="Dragons/elder wyrm.xml"/>
 	<monster name="Elder Dragon" file="Dragons/elder dragon.xml"/>
+	<monster name="Tyrn" file="Dragons/Tyrn.xml"/>
 	
 	<!-- Dreamhaunters -->
 	<monster name="Bad Dream" file="Dreamhaunters/bad dream.xml"/>
@@ -579,7 +582,7 @@
 	<monster name="Johanna" file="Heroes/johanna.xml"/>
 	<monster name="Kael'thas" file="Heroes/kael'thas.xml"/>
 	<monster name="Muradin" file="Heroes/muradin.xml"/>
-	<monster name="Sapper" file="Heroes/sapper.xml"/>
+	<monster name="Mutated Pumpkin" file="Heroes/mutated pumpkin.xml"/>
 	
 	<!-- Hydro-Elementals -->
 	<monster name="Ice Overlord" file="Hydro-Elementals/ice overlord.xml"/>

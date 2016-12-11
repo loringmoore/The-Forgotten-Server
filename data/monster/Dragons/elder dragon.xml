@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Elder Dragon" nameDescription="an elder dragon" race="fire" experience="20100" speed="290" manacost="0">
-	<health now="19000" max="19000"/>
+<monster name="Elder Dragon" nameDescription="an elder dragon" race="fire" experience="10500" speed="290" manacost="0">
+	<health now="9000" max="9000"/>
 	<look type="572" corpse="22730"/>
 	<targetchange interval="5000" chance="8"/>
 	<strategy attack="100" defense="0"/>
@@ -19,20 +19,17 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="150" attack="99"/>
-		<attack name="fire" interval="2000" chance="17" range="7" radius="4" target="1" min="-460" max="-680">
+		<attack name="fire" interval="2000" chance="17" range="7" radius="4" target="1" min="-260" max="-480">
 			<attribute key="shootEffect" value="explosion"/>
 			<attribute key="areaEffect" value="skullvertical"/>
 		</attack>
 		<attack name="firefield" interval="1000" chance="15" range="7" radius="5" target="1">
 			<attribute key="shootEffect" value="explosion"/>
 		</attack>
-		<attack name="fire" interval="3000" chance="17" length="8" spread="3" min="-670" max="-850">
-			<attribute key="areaEffect" value="skullvertical"/>
+		<attack name="fire" interval="3000" chance="17" length="8" spread="3" min="-370" max="-750">
+			<attribute key="areaEffect" value="explosion"/>
 		</attack>
-		<attack name="fire" interval="3000" chance="17" length="8" spread="3" min="-820" max="-1050">
-			<attribute key="areaEffect" value="orcshaman"/>
-		</attack>
-		<attack name="fire" interval="3000" chance="17" length="8" spread="0" min="-970" max="-1250">
+		<attack name="fire" interval="3000" chance="17" length="8" spread="0" min="-270" max="-1250">
 			<attribute key="areaEffect" value="fireattack"/>
 		</attack>
 	</attacks>

@@ -650,10 +650,10 @@
 	<instant name="lancer beetle curse" words="###12"   aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/lancer beetle curse.lua"/>
 	<instant name="lizard magistratus curse" words="###13"   aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/lizard magistratus curse.lua"/>
 	<instant name="death blob curse" words="###14"  aggressive="1"  blockwalls="1" needtarget="1" needlearn="1" script="monster/death blob curse.lua"/>
-	<instant name="choking fear drown" words="###15"  aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/choking fear drown.lua"/>
+	<instant name="choking fear drown" words="###15"  direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/choking fear drown.lua"/>
 	<instant name="blightwalker curse" words="###16"  aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/blightwalker curse.lua"/>
 	<instant name="sea serpent drown" words="###17"  aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/sea serpent drown.lua"/>
-	<instant name="young sea serpent drown" words="###18"  aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/young sea serpent drown.lua"/>
+	<instant name="young sea serpent drown" words="###18"  direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/young sea serpent drown.lua"/>
 	<instant name="quara constrictor freeze" words="###19"  aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/quara constrictor freeze.lua"/>
 	<instant name="quara constrictor electrify" words="###20"   aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/quara constrictor electrify.lua"/>
 	<instant name="cliff strider electrify" words="###21"   aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/cliff strider electrify.lua"/>
